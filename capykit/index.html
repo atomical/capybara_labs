@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CapyKit for macOS</title>
+  <meta name="description" content="CapyKit brings playful overlays to your Mac, including comet drag trails, Snowbar, Falling Leaves, Eye Notch, Wreathline, Airpower, and more.">
+  <style>
+    :root {
+      --bg-top: #d8e1e8;
+      --bg-bottom: #b5c1cb;
+      --panel: rgba(251, 252, 253, 0.82);
+      --panel-strong: rgba(255, 255, 255, 0.92);
+      --ink: #1f2a34;
+      --muted: #586777;
+      --line: rgba(46, 66, 85, 0.16);
+      --accent: #b0492f;
+      --accent-2: #245a7a;
+      --shadow: rgba(24, 35, 45, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(255, 240, 225, 0.35), transparent 28%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    }
+
+    a {
+      color: var(--accent-2);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+    }
+
+    .hero,
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--panel);
+      box-shadow: 0 16px 44px var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero {
+      padding: 32px;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(36, 90, 122, 0.1);
+      color: var(--accent-2);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.5rem, 4vw, 4.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      max-width: 11ch;
+    }
+
+    .subhead {
+      max-width: 58ch;
+      margin-top: 18px;
+      font-size: 1.12rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(176, 73, 47, 0.24);
+    }
+
+    .button.secondary {
+      background: var(--panel-strong);
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .feature {
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.48);
+    }
+
+    .feature h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.97rem;
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 28px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .section p,
+    .section li {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    .section ul {
+      margin: 14px 0 0;
+      padding-left: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 18px;
+      font-size: 0.96rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">macOS Desktop Effects</div>
+      <h1>CapyKit for your Mac.</h1>
+      <p class="subhead">
+        CapyKit brings a collection of playful, polished overlays to macOS:
+        comet drag trails, menu bar snowfall, falling leaves, notch companions,
+        dock garlands, charger flyovers, and more.
+      </p>
+
+      <div class="hero-links">
+        <a class="button primary" href="./support.html">Get Support</a>
+        <a class="button secondary" href="./privacy.html">Privacy Policy</a>
+      </div>
+
+      <p class="hero-note">
+        Built for delight, but designed to stay at home on macOS: configurable,
+        click-through where appropriate, and easy to browse from a single dashboard.
+      </p>
+
+      <div class="grid">
+        <article class="feature">
+          <h3>Comet Trail</h3>
+          <p>Glowing cursor trails that follow drag gestures across your desktop.</p>
+        </article>
+        <article class="feature">
+          <h3>Snowbar</h3>
+          <p>Manual menu bar snowfall with classic speck mode and live intensity tuning.</p>
+        </article>
+        <article class="feature">
+          <h3>Falling Leaves</h3>
+          <p>Animated leaves drifting across the menu bar with wind and monitor controls.</p>
+        </article>
+        <article class="feature">
+          <h3>Eye Notch</h3>
+          <p>Animated eyes around the notch that track the cursor with subtle motion.</p>
+        </article>
+        <article class="feature">
+          <h3>Wreathline</h3>
+          <p>Decorative dock garlands that line up with the Dock without blocking clicks.</p>
+        </article>
+        <article class="feature">
+          <h3>Airpower</h3>
+          <p>An airplane flyover when power connects, with live charger wattage.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel section">
+      <h2>What’s in the app</h2>
+      <p>
+        CapyKit currently includes Airpower, Falling Leaves, Snowbar, Wreathline,
+        Comet Trail, Snow Kick-Up, Notchful, Eye Notch, Fireplace, and Yawner.
+        Each effect can be configured individually, and the main window lets you
+        hide widgets you do not want to keep visible.
+      </p>
+    </section>
+
+    <section class="panel section">
+      <h2>Need help?</h2>
+      <p>
+        For support, bug reports, or App Store questions, email
+        <a href="mailto:adam.t.hallett@gmail.com">adam.t.hallett@gmail.com</a>.
+      </p>
+      <div class="footer-links">
+        <a href="./support.html">Support</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="https://github.com/atomical/capy_kit">GitHub Repository</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

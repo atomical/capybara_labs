@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CapyKit Support</title>
+  <style>
+    :root {
+      --bg: #e5ebf0;
+      --panel: rgba(255, 255, 255, 0.88);
+      --ink: #22303c;
+      --muted: #5b6978;
+      --line: rgba(39, 58, 76, 0.14);
+      --accent: #2a5b76;
+      --shadow: rgba(19, 30, 40, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.55), transparent 28%),
+        linear-gradient(180deg, #d3dde6 0%, var(--bg) 100%);
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 44px 20px 72px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 16px 40px var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    h1,
+    h2,
+    p,
+    li {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin-top: 28px;
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+      letter-spacing: -0.02em;
+    }
+
+    p,
+    li {
+      line-height: 1.65;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(42, 91, 118, 0.1);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card">
+      <div class="eyebrow">Support</div>
+      <h1>CapyKit</h1>
+      <p>
+        CapyKit is a macOS collection of playful desktop overlays and responsive
+        effects, including menu bar snowfall, drag trails, notch companions, and
+        dock decoration.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For support, bug reports, or business inquiries, email
+        <a href="mailto:adam.t.hallett@gmail.com">adam.t.hallett@gmail.com</a>.
+      </p>
+
+      <h2>Developer</h2>
+      <p>Capybara Labs LLC</p>
+
+      <h2>Common Issues</h2>
+      <ul>
+        <li>If an overlay does not appear, confirm the feature is enabled in the main CapyKit dashboard.</li>
+        <li>If a visual effect seems missing, check whether Focus, full-screen app suppression, or Reduce Motion is active.</li>
+        <li>If charger, Dock, or notch effects do not trigger, verify you are testing on a Mac that actually exposes that surface or event.</li>
+        <li>If you report a bug, include your Mac model, macOS version, and which CapyKit widget was active.</li>
+      </ul>
+
+      <h2>Privacy Policy</h2>
+      <p>
+        Read the privacy policy here:
+        <a href="./privacy.html">Privacy Policy</a>
+      </p>
+
+      <h2>Marketing Page</h2>
+      <p>
+        Return to the product overview:
+        <a href="./index.html">CapyKit Home</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
